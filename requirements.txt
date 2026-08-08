@@ -1,0 +1,19 @@
+# Captura de tela rápida e direto na RAM
+mss==9.0.1
+
+# Tratamento de imagem e OCR
+opencv-python==4.9.0.80
+numpy==1.26.4
+pytesseract==0.3.10
+thefuzz==0.22.1
+Levenshtein==0.25.0
+
+# Conexão com a Live Client Data API da Riot
+requests==2.31.0
+urllib3==2.2.1
+
+# Interface gráfica e Overlay Transparente
+PyQt6==6.6.1
+
+# Escuta da tecla TAB em background
+pynput==1.7.6
