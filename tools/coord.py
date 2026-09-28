@@ -1,4 +1,10 @@
+import os
+
 import cv2
+
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+IMAGE_PATH = os.path.join(PROJECT_ROOT, "image.png")
+
 
 def pegar_coordenadas_da_imagem(caminho_imagem):
     # Carrega a sua imagem
@@ -58,7 +64,4 @@ def pegar_coordenadas_da_imagem(caminho_imagem):
     print("="*50 + "\n")
 
 if __name__ == "__main__":
-    # COLOQUE O NOME DO SEU ARQUIVO DE IMAGEM AQUI:
-    nome_da_imagem = "image.png"  
-    
-    pegar_coordenadas_da_imagem(nome_da_imagem)
+    pegar_coordenadas_da_imagem(IMAGE_PATH)
