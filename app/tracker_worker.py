@@ -23,7 +23,7 @@ def ocr_worker(signals):
             print("[+] Partida iniciada! Resetando lista de vistos.")
             in_game_previous = True
             seen_items.clear()
-            signals.update_items.emit(seen_items)
+            signals.update_items.emit(seen_items.copy())
 
         elif not game_active and in_game_previous:
             print("[-] Partida encerrada.")
@@ -40,7 +40,7 @@ def ocr_worker(signals):
                     print(f"[✔ NOVO REGISTRADO]: {item}")
 
             if new_item_added:
-                signals.update_items.emit(seen_items)
+                signals.update_items.emit(seen_items.copy())
 
             # Sleep ultra-baixo para leitura quase em tempo real
             time.sleep(0.1)
